@@ -6,3 +6,10 @@
       ansible.builtin.debug:
         msg: "Bienvenido al mundo de Ansible"
 
+- name: Remove the Apache package
+  ansible.builtin.yum:
+    name: httpd
+    state: absent
+
+
+
