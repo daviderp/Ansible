@@ -5,7 +5,10 @@
     - name: Dame un mensaje
       ansible.builtin.debug:
         msg: "Bienvenido al mundo de Ansible"
-
+    - name: List ansible packages and register result to print with debug later
+      ansible.builtin.yum:
+        list: ansible
+      register: result
 
 
 
