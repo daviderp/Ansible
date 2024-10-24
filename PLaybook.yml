@@ -11,7 +11,10 @@
         name: '*'
         state: latest
         exclude: kernel*,foo*
-        
+      register: salida_dnf
+    - name: reboot si hubo actualizacion
+      ansible.builtin.reboot: 
+      when: salida_dnf is changed        
 
 
 
