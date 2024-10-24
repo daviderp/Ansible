@@ -7,7 +7,7 @@
         msg: "Bienvenido al mundo de Ansible"
 
 - name: Remove the Apache package
-  ansible.builtin.yum:
+  ansible.builtin.yml:
     name: httpd
     state: absent
 
