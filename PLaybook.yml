@@ -1,6 +1,7 @@
 - name: Un playbook muy muy sencillo
   # A quienes se les va a operar 
   hosts: web
+  become: true
   tasks:
     - name: Dame un mensaje
       ansible.builtin.debug:
@@ -10,7 +11,7 @@
         name: '*'
         state: latest
         exclude: kernel*,foo*
-        become: true
+        
 
 
 
