@@ -10,6 +10,7 @@
         name: '*'
         state: latest
         exclude: kernel*,foo*
+        become: true
 
 
 
