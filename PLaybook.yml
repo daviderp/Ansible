@@ -5,11 +5,10 @@
     - name: Dame un mensaje
       ansible.builtin.debug:
         msg: "Bienvenido al mundo de Ansible"
-
-- name: Remove the Apache package
-  ansible.builtin.yml:
-    name: httpd
-    state: absent
+    - name: Remove the Apache package
+      ansible.builtin.yml:
+    - name: httpd
+      state: absent
 
 
 
