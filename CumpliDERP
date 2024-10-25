@@ -1,1 +1,8 @@
+- name: Cumplimiento David
+  hosts: web
+  become: true
 
+  tasks:
+    - name: Mostrar información del sistema
+      ansible.builtin.debug:
+        var: ansible_facts
