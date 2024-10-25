@@ -15,6 +15,11 @@
     - name: reboot si hubo actualizacion
       ansible.builtin.reboot: 
       when: salida_dnf is changed        
-
+      
+    - name: Enviar mensaje a Slack
+      community.general.slack:
+        token: "xoxb-1234-56789abcdefghijklmnop"  # Reemplaza con tu token
+        msg: "¡Despliegue completado con éxito!"
+        channel: "#general"  # Reemplaza con tu canal
 
 
